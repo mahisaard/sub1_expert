@@ -63,31 +63,28 @@ final testMovieMap = {
 };
 
 final testTelevisi = Televisi(
-  firstAirDate: DateTime.parse('2022-10-20'),
-  backdropPath: '/hIZFG7MK4leU4axRFKJWqrjhmxZ.jpg',
-  genreIds: [10765, 18],
-  id: 95403,
-  originalName: 'The Peripheral',
+  firstAirDate: DateTime.parse('2000-09-09 09:09:09.591918'),
+  backdropPath: 'backdropPath',
+  genreIds: [1, 2, 3],
+  id: 1,
+  originalName: 'originalName',
   originCountry: ['originCountry', 'originCountry'],
-  overview:
-      'Stuck in a small Appalachian town, a young woman’s only escape from the daily grind is playing advanced video games. She is such a good player that a company sends her a new video game system to test…but it has a surprise in store. It unlocks all of her dreams of finding a purpose, romance, and glamour in what seems like a game…but it also puts her and her family in real danger.',
-  popularity: 1097.77,
-  posterPath: '/ccBe5BVeibdBEQU7l6P6BubajWV.jpg',
-  name: 'The Peripheral',
-  originalLanguage: 'en',
-  voteAverage: 8.148,
-  voteCount: 338,
+  overview: 'overview',
+  popularity: 1,
+  posterPath: 'posterPath',
+  name: 'name',
+  originalLanguage: 'originalLanguage',
+  voteAverage: 1,
+  voteCount: 1,
 );
 
 final testTelevisiList = [testTelevisi];
 
 final testTelevisiDetail = TelevisiDetail(
-  adult: false,
   backdropPath: '/hIZFG7MK4leU4axRFKJWqrjhmxZ.jpg',
   genres: [GenreTelevisi(id: 1, name: 'Action')],
   id: 95403,
-  overview:
-  'Stuck in a small Appalachian town, a young woman’s only escape from the daily grind is playing advanced video games. She is such a good player that a company sends her a new video game system to test…but it has a surprise in store. It unlocks all of her dreams of finding a purpose, romance, and glamour in what seems like a game…but it also puts her and her family in real danger.',
+  overview: 'Stuck in a small Appalachian town, a young woman’s only escape from the daily grind is playing advanced video games. She is such a good player that a company sends her a new video game system to test…but it has a surprise in store. It unlocks all of her dreams of finding a purpose, romance, and glamour in what seems like a game…but it also puts her and her family in real danger.',
   posterPath: '/ccBe5BVeibdBEQU7l6P6BubajWV.jpg',
   voteAverage: 8.148,
   voteCount: 338,

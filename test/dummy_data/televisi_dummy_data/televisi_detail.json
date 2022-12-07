@@ -1,7 +1,4 @@
 {
-  "page": 1,
-  "results": [
-    {
       "adult": false,
       "backdrop_path": "/jANJGWIKavzyREXUMCHiXFzitDO.jpg",
       "created_by": [
@@ -118,6 +115,4 @@
       "type": "Scripted",
       "vote_average": 5.125,
       "vote_count": 8
-    }
-  ]
 }

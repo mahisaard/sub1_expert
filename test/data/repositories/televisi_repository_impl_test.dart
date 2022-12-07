@@ -31,15 +31,14 @@ void main() {
 
   final tTelevisiModel = TelevisiModel(
     backdropPath: 'backdropPath',
-    genreIds: [1, 2],
+    genreIds: [1, 2, 3],
     id: 1,
-    overview:
-    'overview',
+    overview: 'overview',
     popularity: 1,
     posterPath: 'posterPath',
-    voteAverage: 123,
-    voteCount: 789,
-    firstAirDate: DateTime.parse('2000-09-11'),
+    voteAverage: 1,
+    voteCount: 1,
+    firstAirDate: DateTime.parse('2022-10-20'),
     originCountry: ['originCountry','originCountry'],
     originalName: 'originalName',
     name: 'name',
@@ -48,16 +47,16 @@ void main() {
 
   final tTelevisi = Televisi(
     backdropPath: 'backdropPath',
-    genreIds: [1, 2],
+    genreIds: [1, 2, 3],
     id: 1,
     overview: 'overview',
     popularity: 1,
     posterPath: 'posterPath',
-    voteAverage: 123,
-    voteCount: 789,
-    firstAirDate: DateTime.parse('2000-09-11'),
-    originalName: 'originalName',
+    voteAverage: 1,
+    voteCount: 1,
+    firstAirDate: DateTime.parse('2022-10-20'),
     originCountry: ['originCountry','originCountry'],
+    originalName: 'originalName',
     name: 'name',
     originalLanguage: 'originalLanguage',
   );
@@ -191,10 +190,8 @@ void main() {
   group('Get Televisi Detail', () {
     final tId = 1;
     final tTelevisiResponse = TelevisiDetailResponse(
-      adult: false,
       backdropPath: '/hIZFG7MK4leU4axRFKJWqrjhmxZ.jpg',
       genres: [GenreModelTelevisi(id: 1, name: 'Action')],
-      homepage: "https://google.com",
       id: 95403,
       imdbId: 'imdb1',
       originalLanguage: 'en',
@@ -211,6 +208,7 @@ void main() {
       firstAirDate: '2022-10-20',
       numberOfSeasons: 1,
       name: 'The Peripheral',
+      homepage: 'homepage',
     );
 
     test(

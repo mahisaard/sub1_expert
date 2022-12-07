@@ -35,7 +35,7 @@ class TelevisiModel extends Equatable {
   factory TelevisiModel.fromJson(Map<String, dynamic> json) => TelevisiModel(
         firstAirDate: json['first_air_data'] == ''
             ? DateTime.parse(json["first_air_date"])
-            : DateTime.parse('2000-09-09 09:09:09.593918'),
+            : DateTime.parse('2000-09-09 09:09:09.591918'),
         backdropPath: json["backdrop_path"],
         genreIds: List<int>.from(json["genre_ids"].map((x) => x)),
         id: json["id"],
@@ -51,7 +51,7 @@ class TelevisiModel extends Equatable {
       );
 
   Map<String, dynamic> toJson() => {
-        'first_air_date':
+        "first_air_date":
             "${firstAirDate.year.toString().padLeft(4, '0')}-${firstAirDate.month.toString().padLeft(2, '0')}-${firstAirDate.day.toString().padLeft(2, '0')}",
         "backdrop_path": backdropPath,
         "genre_ids": List<dynamic>.from(genreIds.map((x) => x)),
@@ -60,7 +60,7 @@ class TelevisiModel extends Equatable {
         "overview": overview,
         "popularity": popularity,
         "poster_path": posterPath,
-        'origin_country': List<String>.from(originCountry.map((e) => e)),
+        "origin_country": List<String>.from(originCountry.map((e) => e)),
         "name": name,
         "originalLanguage": originalLanguage,
         "vote_average": voteAverage,
@@ -86,19 +86,21 @@ class TelevisiModel extends Equatable {
   }
 
   @override
-  List<Object?> get props => [
-        firstAirDate,
-        backdropPath,
-        genreIds,
-        id,
-        originalName,
-        overview,
-        popularity,
-        posterPath,
-        originCountry,
-        name,
-        originalLanguage,
-        voteAverage,
-        voteCount,
-      ];
+  List<Object?> get props {
+    return [
+      firstAirDate,
+      backdropPath,
+      genreIds,
+      id,
+      originalName,
+      overview,
+      popularity,
+      posterPath,
+      originCountry,
+      name,
+      originalLanguage,
+      voteAverage,
+      voteCount,
+    ];
+  }
 }

@@ -60,12 +60,13 @@ void main() {
     posterPath: 'posterPath',
     voteAverage: 1,
     voteCount: 1,
-    firstAirDate:  DateTime.parse('2000-09-09 09:09:09.591918'),
+    firstAirDate:  null,
     originalName: 'original_name',
     originCountry: ['origin_country','origin_country'],
     name: 'name',
     originalLanguage: 'original_language',
   );
+
   final tTelevisiList = <Televisi>[tTelevisi];
 
   void _arrangeUsecase() {
@@ -127,7 +128,7 @@ void main() {
       await provider.fetchTelevisiDetail(tId);
       // assert
       verify(mockGetTelevisiRecommendations.execute(tId));
-      expect(provider.televisiRecommendations, tTelevisi);
+      expect(provider.televisiRecommendations, tTelevisiList);
     });
 
     test('should update recommendation state when data is gotten successfully',
@@ -138,7 +139,7 @@ void main() {
           await provider.fetchTelevisiDetail(tId);
           // assert
           expect(provider.recommendationState, RequestState.Loaded);
-          expect(provider.televisiRecommendations, tTelevisi);
+          expect(provider.televisiRecommendations, tTelevisiList);
         });
 
     test('should update error message when request in successful', () async {

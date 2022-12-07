@@ -4,7 +4,6 @@ import 'package:equatable/equatable.dart';
 
 class TelevisiDetailResponse extends Equatable {
   TelevisiDetailResponse({
-    required this.adult,
     required this.backdropPath,
     required this.genres,
     required this.homepage,
@@ -25,7 +24,6 @@ class TelevisiDetailResponse extends Equatable {
     required this.voteCount,
   });
 
-  final bool adult;
   final String? backdropPath;
   final List<GenreModelTelevisi> genres;
   final String homepage;
@@ -47,7 +45,6 @@ class TelevisiDetailResponse extends Equatable {
 
   factory TelevisiDetailResponse.fromJson(Map<String, dynamic> json) =>
       TelevisiDetailResponse(
-        adult: json["adult"],
         backdropPath: json["backdrop_path"],
         genres: List<GenreModelTelevisi>.from(
             json["genres"].map((x) => GenreModelTelevisi.fromJson(x))),
@@ -70,7 +67,6 @@ class TelevisiDetailResponse extends Equatable {
       );
 
   Map<String, dynamic> toJson() => {
-        "adult": adult,
         "backdrop_path": backdropPath,
         "genres": List<dynamic>.from(genres.map((x) => x.toJson())),
         "homepage": homepage,
@@ -93,7 +89,6 @@ class TelevisiDetailResponse extends Equatable {
 
   TelevisiDetail toEntity() {
     return TelevisiDetail(
-        adult: this.adult,
         backdropPath: this.backdropPath,
         genres: this.genres.map((genre) => genre.toEntity()).toList(),
         id: this.id,
@@ -112,7 +107,6 @@ class TelevisiDetailResponse extends Equatable {
   @override
   // TODO: implement props
   List<Object?> get props => [
-        adult,
         backdropPath,
         genres,
         homepage,
