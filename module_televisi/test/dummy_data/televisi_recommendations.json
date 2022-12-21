@@ -1,0 +1,28 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/qtfMr08KQsWXnCHY0a96N8NpQ2l.jpg",
+      "id": 30984,
+      "name": "Bleach",
+      "original_language": "ja",
+      "original_name": "ブリーチ",
+      "overview": "For as long as he can remember, Ichigo Kurosaki has been able to see ghosts. But when he meets Rukia, a Soul Reaper who battles evil spirits known as Hollows, he finds his life is changed forever. Now, with a newfound wealth of spiritual energy, Ichigo discovers his true calling: to protect the living and the dead from evil.",
+      "poster_path": "/2EewmxXe72ogD0EaWM8gqa0ccIw.jpg",
+      "media_type": "tv",
+      "genre_ids": [
+        10759,
+        16,
+        10765
+      ],
+      "popularity": 203.417,
+      "first_air_date": "2004-10-05",
+      "vote_average": 8.383,
+      "vote_count": 1380,
+      "origin_country": [
+        "JP"
+      ]
+    }
+  ]
+}

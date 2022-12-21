@@ -1,0 +1,26 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "backdrop_path": "/nLKYAJCEi6OQVji1HJIxSQ74H9s.jpg",
+      "first_air_date": "2005-02-21",
+      "genre_ids": [
+        16,
+        10759,
+        10765
+      ],
+      "id": 246,
+      "name": "Avatar: The Last Airbender",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Avatar: The Last Airbender",
+      "overview": "In a war-torn world of elemental magic, a young boy reawakens to undertake a dangerous mystic quest to fulfill his destiny as the Avatar, and bring peace to the world.",
+      "popularity": 52.756,
+      "poster_path": "/cHFZA8Tlv03nKTGXhLOYOLtqoSm.jpg",
+      "vote_average": 8.7,
+      "vote_count": 3016
+    }
+  ]
+}
