@@ -1,9 +1,3 @@
-import 'package:bloc_test/bloc_test.dart';
-import 'package:dartz/dartz.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/annotations.dart';
-import 'package:mockito/mockito.dart';
-import 'package:module_common/common/failure.dart';
 import 'package:module_movies/domain/entities/genre.dart';
 import 'package:module_movies/domain/entities/movie.dart';
 import 'package:module_movies/domain/entities/movie_detail.dart';
@@ -18,6 +12,12 @@ import 'package:module_movies/domain/usecases/remove_watchlist.dart';
 import 'package:module_movies/domain/usecases/save_watchlist.dart';
 import 'package:module_movies/domain/usecases/search_movies.dart';
 import 'package:module_movies/presentation/bloc/movie_bloc.dart';
+import 'package:bloc_test/bloc_test.dart';
+import 'package:dartz/dartz.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/annotations.dart';
+import 'package:mockito/mockito.dart';
+import 'package:module_common/common/failure.dart';
 
 import 'movie_bloc_test.mocks.dart';
 
@@ -34,31 +34,31 @@ import 'movie_bloc_test.mocks.dart';
   RemoveWatchlist,
 ])
 void main() {
-  // Now Playing
+  // Now Playing Movie
   late NowPlayingMovieBloc nowPlayingBloc;
   late MockGetNowPlayingMovies mockGetNowPlayingMovies;
 
-  // Popular
+  // Popular Movie
   late PopularMovieBloc popularBloc;
   late MockGetPopularMovies mockGetPopularMovies;
 
-  // Top Rated
+  // Top Rated Movie
   late TopRatedMovieBloc topRatedBloc;
   late MockGetTopRatedMovies mockGetTopRatedMovies;
 
-  // Recommendations
+  // Recommendations Movie
   late RecommendationsBloc recommendationsBloc;
   late MockGetMovieRecommendations mockGetMovieRecommendations;
 
-  // Search
+  // Search Movie
   late SearchMovieBloc searchMovieBloc;
   late MockSearchMovies mockSearchMovies;
 
-  // Detail
+  // Detail Movie
   late DetailMovieBloc detailMovieBloc;
   late MockGetMovieDetail mockGetMovieDetail;
 
-  // Watchlist
+  // Watchlist Movie
   late WatchlistMovieBloc watchlistBloc;
   late MockGetWatchlistMovies mockGetWatchlistMovies;
   late MockGetWatchListStatus mockGetWatchListStatusMovie;
@@ -66,31 +66,31 @@ void main() {
   late MockRemoveWatchlist mockRemoveWatchlistMovie;
 
   setUp(() {
-    // Now Playing
+    // Now Playing Movie
     mockGetNowPlayingMovies = MockGetNowPlayingMovies();
     nowPlayingBloc = NowPlayingMovieBloc(mockGetNowPlayingMovies);
 
-    // Popular
+    // Popular Movie
     mockGetPopularMovies = MockGetPopularMovies();
     popularBloc = PopularMovieBloc(mockGetPopularMovies);
 
-    // Top Rated
+    // Top Rated Movie
     mockGetTopRatedMovies = MockGetTopRatedMovies();
     topRatedBloc = TopRatedMovieBloc(mockGetTopRatedMovies);
 
-    // Recommendations
+    // Recommendations Movie
     mockGetMovieRecommendations = MockGetMovieRecommendations();
     recommendationsBloc = RecommendationsBloc(mockGetMovieRecommendations);
 
-    // Search
+    // Search Movie
     mockSearchMovies = MockSearchMovies();
     searchMovieBloc = SearchMovieBloc(mockSearchMovies);
 
-    // Detail
+    // Detail Movie
     mockGetMovieDetail = MockGetMovieDetail();
     detailMovieBloc = DetailMovieBloc(mockGetMovieDetail);
 
-    // Watchlist
+    // Watchlist Movie
     mockGetWatchlistMovies = MockGetWatchlistMovies();
     mockGetWatchListStatusMovie = MockGetWatchListStatus();
     mockSaveWatchlistMovie = MockSaveWatchlist();

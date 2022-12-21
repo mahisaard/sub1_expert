@@ -1,14 +1,14 @@
-import 'dart:convert';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:http/http.dart' as http;
-import 'package:mockito/mockito.dart';
 import 'package:module_common/common/exception.dart';
 import 'package:module_movies/data/datasources/movie_remote_data_source.dart';
 import 'package:module_movies/data/models/movie_detail_model.dart';
 import 'package:module_movies/data/models/movie_response.dart';
-
 import '../../helpers/test_helper.mocks.dart';
 import '../../json_reader.dart';
+import 'dart:convert';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:http/http.dart' as http;
+import 'package:mockito/mockito.dart';
+
 
 void main() {
   // ignore: constant_identifier_names
