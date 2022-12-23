@@ -11,9 +11,7 @@ import 'package:module_televisi/presentation/pages/televisi_detail_page.dart';
 import 'package:module_televisi/presentation/pages/top_rated_televisi_page.dart';
 import 'package:module_televisi/presentation/pages/watchlist_televisi_page.dart';
 import 'package:module_movies/presentation/pages/home_movie_page.dart';
-
 import '../../domain/entities/televisi.dart';
-
 import 'package:flutter/material.dart';
 
 class HomeTelevisiPage extends StatefulWidget {
@@ -59,7 +57,7 @@ class _HomeTelevisiPageState extends State<HomeTelevisiPage> {
             ),
             ListTile(
               leading: const Icon(Icons.save_alt),
-              title: const Text('Watchlist'),
+              title: const Text('Watchlist Movies'),
               onTap: () {
                 Navigator.pushNamed(context, WatchlistMoviesPage.ROUTE_NAME);
               },
@@ -89,6 +87,7 @@ class _HomeTelevisiPageState extends State<HomeTelevisiPage> {
         ),
       ),
       appBar: AppBar(
+        key: const Key("televisi page"),
         title: const Text('Ditonton'),
         actions: [
           IconButton(

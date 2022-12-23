@@ -1,7 +1,5 @@
 import 'dart:convert';
-
-
-import 'package:http/http.dart' as http;
+import 'package:http/io_client.dart';
 import 'package:module_common/common/exception.dart';
 import 'package:module_televisi/data/models/televisi_detail_model.dart';
 import 'package:module_televisi/data/models/televisi_model.dart';
@@ -20,7 +18,7 @@ class TelevisiRemoteDataSourceImpl implements TelevisiRemoteDataSource {
   static const API_KEY = 'api_key=6b71ad3b084c7e3fe1b6af98384ad19b';
   static const BASE_URL = 'https://api.themoviedb.org/3';
 
-  final http.Client client;
+  final IOClient client;
 
   TelevisiRemoteDataSourceImpl({required this.client});
 

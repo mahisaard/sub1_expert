@@ -64,7 +64,7 @@ void init() {
   ));
 
   // Tv series BLOC
-  locator.registerFactory(() => NowPlayingMovieBloc(
+  locator.registerFactory(() => NowPlayingTelevisiBloc(
     locator(),
   ));
   locator.registerFactory(() => PopularTelevisiBloc(
@@ -97,6 +97,7 @@ void init() {
   locator.registerLazySingleton(() => GetMovieDetail(locator()));
   locator.registerLazySingleton(() => GetMovieRecommendations(locator()));
   locator.registerLazySingleton(() => SearchMovies(locator()));
+
   locator.registerLazySingleton(() => GetWatchListStatus(locator()));
   locator.registerLazySingleton(() => SaveWatchlist(locator()));
   locator.registerLazySingleton(() => RemoveWatchlist(locator()));
@@ -108,6 +109,7 @@ void init() {
   locator.registerLazySingleton(() => GetTelevisiDetail(locator()));
   locator.registerLazySingleton(() => GetTelevisiRecommendations(locator()));
   locator.registerLazySingleton(() => SearchTelevisi(locator()));
+
   locator.registerLazySingleton(() => GetWatchlistTelevisi(locator()));
   locator.registerLazySingleton(() => GetWatchListStatusTelevisi(locator()));
   locator.registerLazySingleton(() => SaveWatchlistTelevisi(locator()));

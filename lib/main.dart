@@ -1,4 +1,7 @@
+import 'package:ditonton/firebase_options.dart';
+import 'package:ditonton/injection.dart' as di;
 import 'package:ditonton/ssl/ssl_pinning_helper.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -6,6 +9,12 @@ import 'package:module_common/common/constants.dart';
 import 'package:module_common/common/utils.dart';
 import 'package:module_common/common_page/about_page.dart';
 import 'package:module_movies/presentation/bloc/movie_bloc.dart';
+import 'package:module_movies/presentation/pages/home_movie_page.dart';
+import 'package:module_movies/presentation/pages/movie_detail_page.dart';
+import 'package:module_movies/presentation/pages/popular_movies_page.dart';
+import 'package:module_movies/presentation/pages/search_page.dart';
+import 'package:module_movies/presentation/pages/top_rated_movies_page.dart';
+import 'package:module_movies/presentation/pages/watchlist_movies_page.dart';
 import 'package:module_televisi/presentation/bloc/televisi_bloc.dart';
 import 'package:module_televisi/presentation/pages/home_televisi_page.dart';
 import 'package:module_televisi/presentation/pages/popular_televisi_page.dart';
@@ -15,15 +24,13 @@ import 'package:module_televisi/presentation/pages/televisi_detail_page.dart';
 import 'package:module_televisi/presentation/pages/top_rated_televisi_page.dart';
 import 'package:module_televisi/presentation/pages/watchlist_televisi_page.dart';
 import 'package:provider/provider.dart';
-import 'package:ditonton/injection.dart' as di;
-import 'package:module_movies/presentation/pages/home_movie_page.dart';
-import 'package:module_movies/presentation/pages/movie_detail_page.dart';
-import 'package:module_movies/presentation/pages/popular_movies_page.dart';
-import 'package:module_movies/presentation/pages/search_page.dart';
-import 'package:module_movies/presentation/pages/top_rated_movies_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    name: "Ditonton",
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   await SslPinningHelper.initializing();
 
@@ -97,7 +104,7 @@ class MyApp extends StatelessWidget {
         navigatorObservers: [routeObserver],
         onGenerateRoute: (RouteSettings settings) {
           switch (settings.name) {
-          // Movie Route
+            // Movie Route
             case HomeMoviePage.ROUTE_NAME:
               return MaterialPageRoute(
                 builder: (_) => const HomeMoviePage(),
@@ -114,18 +121,23 @@ class MyApp extends StatelessWidget {
               return CupertinoPageRoute(
                 builder: (_) => const SearchPage(),
               );
+            case WatchlistMoviesPage.ROUTE_NAME:
+              return MaterialPageRoute(
+                  builder: (_) => const WatchlistMoviesPage());
             case MovieDetailPage.ROUTE_NAME:
               final id = settings.arguments as int;
               return MaterialPageRoute(
                 builder: (_) => MovieDetailPage(id: id),
                 settings: settings,
               );
-          // TV Series Route
+
+            // Televisi Route
             case NowPlayingTelevisiPage.ROUTE_NAME:
               return MaterialPageRoute(
                   builder: (_) => const NowPlayingTelevisiPage());
             case HomeTelevisiPage.ROUTE_NAME:
-              return MaterialPageRoute(builder: (_) => const HomeTelevisiPage());
+              return MaterialPageRoute(
+                  builder: (_) => const HomeTelevisiPage());
             case PopularTelevisiPage.ROUTE_NAME:
               return MaterialPageRoute(
                   builder: (_) => const PopularTelevisiPage());
@@ -142,7 +154,8 @@ class MyApp extends StatelessWidget {
                 settings: settings,
               );
             case WatchlistTelevisiPage.ROUTE_NAME:
-              return MaterialPageRoute(builder: (_) => const WatchlistTelevisiPage());
+              return MaterialPageRoute(
+                  builder: (_) => const WatchlistTelevisiPage());
             case AboutPage.ROUTE_NAME:
               return MaterialPageRoute(builder: (_) => const AboutPage());
             default:

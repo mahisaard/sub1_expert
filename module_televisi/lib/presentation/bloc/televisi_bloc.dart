@@ -181,11 +181,8 @@ class WatchlistTelevisiBloc extends Bloc<TelevisiEvent, TelevisiState> {
 
     on<OnRemoveWatchlistTelevisi>((event, emit) async {
       final televisi = event.televisi;
-
       emit(TelevisiLoading());
-
       final result = await _removeWatchlistTelevisi.execute(televisi);
-
       result.fold(
         (failure) => emit(TelevisiError(failure.message)),
         (message) => emit(TelevisiWatchlistMessage(message)),
