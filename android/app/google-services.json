@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "689042038719",
+    "firebase_url": "https://ditonton-14934-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "ditonton-14934",
+    "storage_bucket": "ditonton-14934.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689042038719:android:c50b9cac81a706dcd94b0a",
+        "android_client_info": {
+          "package_name": "com.dicoding.ditonton"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "689042038719-iluobpnhmec2vudagn3ct6ri517i8jos.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp0fDpJsLl9f_wGlpD5FNPOrhSmrhaIfg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "689042038719-iluobpnhmec2vudagn3ct6ri517i8jos.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
