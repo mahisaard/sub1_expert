@@ -1,4 +1,4 @@
-[![Codemagic build status](https://api.codemagic.io/apps/63a6663247d91e10ebc88b50/release-workflow/status_badge.svg)](https://codemagic.io/apps/63a6663247d91e10ebc88b50/release-workflow/latest_build)
+[![Codemagic build status](https://api.codemagic.io/apps/63a7b26ff8fe24444ac8418c/release-workflow/status_badge.svg)](https://codemagic.io/apps/63a7b26ff8fe24444ac8418c/release-workflow/latest_build)
 ![ss code magic](https://user-images.githubusercontent.com/106152206/209418873-e167722b-aaf5-408d-839f-76cef8cd6ded.jpg)
 
 ![ss analytics](https://user-images.githubusercontent.com/106152206/209418915-d00f884c-cedf-41d8-aefb-5c78fa8e72fc.jpg)
